@@ -1,0 +1,28 @@
+ALGORITHM 
+VAR
+    phrase:STRING;
+    i:INTEGER:=0;
+    nbrC:INTEGER:=0;
+    voels:INTEGER=0;
+    nbrw:INTEGER:=0;
+
+BEGIN
+    write("give me phrase");
+    read(phrase);
+    WHILE (phrase[i] <>".") DO
+        nbrC:=nbrC+1;
+        IF (phrase[i]="a" OR phrase[i]="e"
+        OR phrase[i]="i"OR phrase[i]="u"
+        OR phrase[i]="o" OR phrase[i]="A" OR phrase[i]="E"
+        OR phrase[i]="I"OR phrase[i]="U"
+        OR phrase[i]="O" ) THEN
+        voels:=voels+1;
+        END_IF
+        IF (phrase[i]=" ") THEN
+        nbrw:=nbrw+1;
+        END_IF
+        i:=i+1;
+    END_WHILE
+    write(" number of charcter:",nbrC , "number of words:",nbrw, "number of voels:",voels, );
+    
+END
